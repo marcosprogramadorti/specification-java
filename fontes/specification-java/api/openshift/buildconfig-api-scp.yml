@@ -1,0 +1,23 @@
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: bc-api-scp
+  labels:
+    name: bc-api-scp
+spec:
+  source:
+    type: Git
+    git:
+      uri: http://gitlab.mt.transportes.gov.br/MTPA/scp.git
+      ref: "homolog"
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: fontes/api-scp/scp/Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: "api-scp:latest"
+  resources: {}
+status:
+  lastVersion: 0

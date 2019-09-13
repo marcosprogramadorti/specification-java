@@ -1,0 +1,9 @@
+package br.gov.infraestrutura.api.repository.interfaces;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.gov.infraestrutura.api.model.#Livro#;
+
+public interface #Livro#Repository extends JpaRepository<#Livro#, Long> {
+
+}
